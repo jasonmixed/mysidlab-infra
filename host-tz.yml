@@ -5,8 +5,8 @@
   gather_facts: False
   become: true
   vars:
-    hostname: taranto-cateyes
-    tz: Antarctica/McMurdo
+    hostname: siduser211-dogtail
+    tz: America/Los_Angeles
     token: T04NJ722U/BQB4MBBHV/RZPNWsz38MD1WtuVcena5reb
     
   tasks:
@@ -18,7 +18,7 @@
     
     - name: Set hostname
       hostname:
-        name: "{{ hostname }}"
+        name: "{{ hostname }}-{{ srvidx }}"
           
     - name: Dump host facts
       setup: 
